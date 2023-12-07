@@ -39,7 +39,7 @@ Base für a WSL development environment for touchpi apps on a windows machine. T
 ### Use
 - Run your X Windows Server
 - Open your development shell with: `wsl -d devbuster`
-- Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <u>It is not recommended to use this browser for internet surfing</u>, because it is an old version with lots of vulnerabilities. Just use it internally or use it only with well known internets sites (e.g. entering your pycharm licence key).
+- Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <ins>It is not recommended to use this browser for internet surfing</ins>, because it is an old version with lots of vulnerabilities. Just use it internally or use it only with well known internets sites (e.g. entering your pycharm licence key).
 - `cd touchpi`
 - Run touchpi with `./start.sh`. It will apear as X Window.
 - Start your IDE in your WSL devbuster shell. If it is graphical it will apear as X Window. To run touchpi from an IDE, you have to set the python working directory to the folder touchpi/touchpi
