@@ -19,7 +19,7 @@ Base für a WSL development environment for touchpi apps on a windows machine. T
 - or pull image from docker hub
   - `docker pull pitouch/devbuster`
 - Run Docker container: `run -d -t pitouch/devbuster ls`  (container is created, runs and exits)
-- Get your containerid with `docker ps -a` or `docker container ls -a | grep -i devbuster | awk '{print $1}'`
+- Get your containerid with `docker container ls -a | grep -i devbuster | awk '{print $1}'`
 - Export container: `docker export DockerContainerID > /mnt/c/wsl/devbuster.tar`
 - **Open a window terminal** (e.g. Power Shell)
 - Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create the light-weight WSL2 virtual machine file ext4.vhdx in c:\wsl)
