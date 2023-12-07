@@ -18,7 +18,7 @@ Base für a WSL development environment for touchpi apps on a windows machine. T
   - Build local Docker image with: `docker build -t pitouch/devbuster .`
 - or pull image from docker hub
   - `docker pull pitouch/devbuster`
-- Run Docker container: `run -d -t pitouch/devbuster ls`  (container is created, runs and exits)
+- Run Docker container: `run -d pitouch/devbuster ls`  (container is created, runs and exits)
 - Get your containerid with `docker container ls -a | grep -i devbuster | awk '{print $1}'`
 - Export container: `docker export DockerContainerID > /mnt/c/wsl/devbuster.tar`
 - **Open a window terminal** (e.g. Power Shell)
