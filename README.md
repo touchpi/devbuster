@@ -10,7 +10,7 @@ Base für a WSL development environment for touchpi apps on a windows machine. T
 - X Windows Server on windows machine (GWSL, XMing, VcXsrv,...)
 
 ### Install
-- Create a `C:\wsl` folder on your windows machine (you can use any other folder at C:, but then you have to adjust some lines later)
+- Create `C:\wsl` folder on your windows machine (you can use any other folder at C:, but then you have to adjust some lines later)
 - **Open WSL linux terminal** (e.g. Ubuntu)
 - Clone this repo and `cd devbuster`
 - Optional: Change USERNAME, TZ in Dockerfile
