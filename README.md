@@ -1,7 +1,6 @@
 # WSL devbuster image (amd64 libs)
 
-Base für WSL devlopment environment for touchpi python apps on a windows machine.
-amd64 libs.
+Base für WSL devlopment environment for touchpi python apps on a windows machine (amd64 libs).
 
 ### Prerequisites
 - Windows 10/11
