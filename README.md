@@ -1,6 +1,6 @@
 # WSL devbuster image
 
-Base for a WSL development environment for touchpi apps on a windows machine. The linux environment with amd64 libs is similar to an arm based Raspberry PI OS Buster (e.g. installed on an old Raspberry PI2 or a Raspberry Zero) and is intended for developing touchpi python3 apps.
+Base for a WSL development environment for touchpi apps on a windows machine. The linux environment with amd64 libs is similar to an arm based Raspberry PI OS Buster (e.g. installed on Raspberry PI2 or a Raspberry Zero W) and is intended for developing touchpi python3 apps.
 
 ### Prerequisites
 - Windows 10/11
@@ -38,7 +38,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 
 ### Use
 - Run your X Windows Server
-- Open your development shell with: `wsl -d devbuster --cd ~`
+- Open your development shell (e.g. with `wsl -d devbuster --cd ~`)
 - Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <ins>It is not recommended to use this browser for internet surfing, because it is an old version with lots of vulnerabilities.</ins> Just use it internally or use it only for well known internets sites (e.g. entering your pycharm licence key).
 - `cd touchpi`
 - Run touchpi with `./start.sh`. It will apear as X Window.
