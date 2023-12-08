@@ -67,9 +67,16 @@ RUN apt install --yes --no-install-recommends \
     fonts-quicksand \
     fonts-noto-mono \
     fonts-droid-fallback \
+    at-spi2-core \
     libsecret-1-0 \
     gnome-keyring \
     hicolor-icon-theme
+
+RUN apt install --yes --no-install-recommends vlc
+
+RUN apt autoremove --purge -y && \
+	apt clean -y && \
+	rm -rf /var/lib/apt/lists/*
 
 RUN useradd --create-home --shell /bin/bash --user-group --groups adm,dialout,cdrom,floppy,sudo,audio,dip,video,plugdev $NEWUSER && \
     passwd -d $NEWUSER && \
