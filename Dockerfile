@@ -78,12 +78,12 @@ RUN useradd --create-home --shell /bin/bash --user-group --groups adm,dialout,cd
     echo "systemd=true" >>/etc/wsl.conf && \
     echo "[user]" >>/etc/wsl.conf && \
     echo "default=$NEWUSER" >>/etc/wsl.conf && \
-    mkdir /home/$NEWUSER/.ssl && \
-    chown $NEWUSER:$NEWUSER /home/$NEWUSER/.ssl && \
-    chmod 700 /home/$NEWUSER/.ssl && \
-    touch /home/$NEWUSER/.ssl/id_rsa && \
-    chown $NEWUSER:$NEWUSER /home/$NEWUSER/.ssl/id_rsa && \
-    chmod 600 /home/$NEWUSER/.ssl/id_rsa && \
+    mkdir /home/$NEWUSER/.ssh && \
+    chown $NEWUSER:$NEWUSER /home/$NEWUSER/.ssh && \
+    chmod 700 /home/$NEWUSER/.ssh && \
+    touch /home/$NEWUSER/.ssh/id_rsa && \
+    chown $NEWUSER:$NEWUSER /home/$NEWUSER/.ssh/id_rsa && \
+    chmod 600 /home/$NEWUSER/.ssh/id_rsa && \
     echo "export LC_ALL=C.UTF-8" >> /home/$NEWUSER/.bashrc && \
     echo "export LANG=C.UTF-8" >> /home/$NEWUSER/.bashrc && \
     echo "export LANGUAGE=en" >> /home/$NEWUSER/.bashrc
