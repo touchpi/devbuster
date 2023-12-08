@@ -19,11 +19,11 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - or pull image from docker hub
   - `docker pull pitouch/devbuster`
 - Run Docker container: `docker run -d pitouch/devbuster ls`  (container is created, runs and exits)
-- Get your containerid with `docker container ls -a | grep -i devbuster | awk '{print $1}'`
-- Export container: `docker export DockerContainerID > /mnt/c/wsl/devbuster.tar`
+- Get your containerid with `CONTAINERID=$(docker container ls -a | grep -i devbuster | awk '{print $1}')`
+- Export container: `docker export $CONTAINERID > /mnt/c/wsl/devbuster.tar`
 - **Open a window terminal** (e.g. Power Shell)
 - Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create the light-weight WSL2 virtual machine file ext4.vhdx in c:\wsl)
-- **Open WSL devbuster shell** with `wsl -d devbuster`
+- **Open WSL devbuster shell** with `wsl -d devbuster --cd ~`
 - Check environment in WSL shell with `env`. If DISPLAY is not set, then add once the line `export DISPLAY=:0` in .bashrc (don't forget to stop and start shell again)
 - Optional: `apt update` and `apt upgrade`
 - Optional: install your favorite IDE (e.g. pycharm)
@@ -33,15 +33,20 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - Install touchpi once with `./scripts/install.sh` (venv and python requirements are installed)
 
 ### Cleanup
-- The docker image and its container file are no longer needed and can be removed
+- The docker image and its container file are no longer needed and can be removed from docker
 - `/mnt/c/wsl/devbuster.tar` is no longer needed and can be deleted
 
 ### Use
 - Run your X Windows Server
 - Open your development shell with: `wsl -d devbuster`
-- Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <ins>It is not recommended to use this browser for internet surfing</ins>, because it is an old version with lots of vulnerabilities. Just use it internally or use it only with well known internets sites (e.g. entering your pycharm licence key).
+- Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <ins>It is not recommended to use this browser for internet surfing, because it is an old version with lots of vulnerabilities.</ins> Just use it internally or use it only for well known internets sites (e.g. entering your pycharm licence key).
 - `cd touchpi`
 - Run touchpi with `./start.sh`. It will apear as X Window.
 - Start your IDE in your WSL devbuster shell. If it is graphical it will apear as X Window. To run touchpi from an IDE, you have to set the python working directory to the folder touchpi/touchpi
+
+  ### Remove
+  - `wsl --terminate devbuster`
+  - `wsl --unregister devbuster` (deletes the virtual machine file ext4.vhdx will all content inside!!!)
+
 
 Happy developing. Guides for developer and other image types are in work.
