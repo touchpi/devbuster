@@ -22,7 +22,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - Get your containerid with `CONTAINERID=$(docker container ls -a | grep -i devbuster | awk '{print $1}')`
 - Export container: `docker export $CONTAINERID > /mnt/c/wsl/devbuster.tar`
 - **Open a window terminal** (e.g. Power Shell)
-- Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create the light-weight WSL2 virtual machine file ext4.vhdx in c:\wsl and register it as a wsl terminal)
+- Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create a light-weight WSL2 virtual machine file ext4.vhdx and register it as a wsl terminal)
 - **Open WSL devbuster shell** with `wsl -d devbuster --cd ~`
 - Check environment in WSL shell with `env`. If DISPLAY is not set, then add once the line `export DISPLAY=:0` in .bashrc (don't forget to stop and start shell again)
 - Optional: `apt update` and `apt upgrade`
