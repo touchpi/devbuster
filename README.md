@@ -22,7 +22,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - Get your containerid with `CONTAINERID=$(docker container ls -a | grep -i devbuster | awk '{print $1}')`
 - Export container: `docker export $CONTAINERID > /mnt/c/wsl/devbuster.tar`
 - **Open a window terminal** (e.g. Power Shell)
-- Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create the light-weight WSL2 virtual machine file ext4.vhdx in c:\wsl)
+- Import from a window terminal with `wsl --import devbuster c:\wsl c:\wsl\devbuster.tar` (this will create the light-weight WSL2 virtual machine file ext4.vhdx in c:\wsl and register it as a wsl terminal)
 - **Open WSL devbuster shell** with `wsl -d devbuster --cd ~`
 - Check environment in WSL shell with `env`. If DISPLAY is not set, then add once the line `export DISPLAY=:0` in .bashrc (don't forget to stop and start shell again)
 - Optional: `apt update` and `apt upgrade`
@@ -38,7 +38,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 
 ### Use
 - Run your X Windows Server
-- Open your development shell with: `wsl -d devbuster`
+- Open your development shell with: `wsl -d devbuster --cd ~`
 - Default browser is chromium. Just enter `chromium` in your WSL shell. It should apear a X Window with the chromium browser. <ins>It is not recommended to use this browser for internet surfing, because it is an old version with lots of vulnerabilities.</ins> Just use it internally or use it only for well known internets sites (e.g. entering your pycharm licence key).
 - `cd touchpi`
 - Run touchpi with `./start.sh`. It will apear as X Window.
