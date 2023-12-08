@@ -14,7 +14,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - **Open WSL linux terminal** (e.g. Ubuntu)
 - Build your own image
   - Clone this repo and `cd devbuster`
-  - Optional: Change USERNAME, TZ in Dockerfile
+  - Optional: Change USERNAME, TIMEZONE in Dockerfile
   - Build local Docker image with: `docker build -t pitouch/devbuster .`
 - or pull image from docker hub
   - `docker pull pitouch/devbuster`
