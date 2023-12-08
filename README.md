@@ -44,7 +44,7 @@ Base for a WSL development environment for touchpi apps on a windows machine. Th
 - Run touchpi with `./start.sh`. It will apear as X Window.
 - Start your IDE in your WSL devbuster shell. If it is graphical it will apear as X Window. To run touchpi from an IDE, you have to set the python working directory to the folder touchpi/touchpi
 
-  ### Remove
+### Remove
   - `wsl --terminate devbuster`
   - `wsl --unregister devbuster` (deletes the virtual machine file ext4.vhdx will all content inside!!!)
 
