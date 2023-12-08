@@ -1,6 +1,6 @@
 # WSL devbuster image
 
-Base für a WSL development environment for touchpi apps on a windows machine. The linux environment with amd64 libs is similar to an arm based Raspberry PI OS Buster (e.g. installed on an old Raspberry PI2 or a Raspberry Zero) and is intended for developing touchpi python3 apps.
+Base for a WSL development environment for touchpi apps on a windows machine. The linux environment with amd64 libs is similar to an arm based Raspberry PI OS Buster (e.g. installed on an old Raspberry PI2 or a Raspberry Zero) and is intended for developing touchpi python3 apps.
 
 ### Prerequisites
 - Windows 10/11
